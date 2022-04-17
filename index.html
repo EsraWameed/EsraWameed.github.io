@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8"
+    <!--to function well on small devices as well as big ones-->
+    <meta name= "viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevEsra Portfolio Website</title>
+    <!--normalize differences between different browsers from cdnjs.com-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!--socials and icons from cdnjs.com-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap">
+  </head>
+  <body>
+  <!--to open and close navigation-->
+  <button class="nav-toggle" aria-label="toggle navigation">
+    <!--to animate and style-->
+    <span class="hamburger"></span>
+  </button>
+  <nav class="nav">
+    <!--list is a sub-component of nav-->
+    <ul class="nav__list">
+      <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+      <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
+      <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+      <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+    </ul>
+  </nav>
+
+</header>
+<!--Introduction-->
+<!--use id for anchors or javascript-->
+<section class="intro" id="home">
+  <!--double hyfin is a modifier class,modift section title  to be diff than the default section title-->
+  <h1 class="section__title section__title--intro">
+    Hi, I am <strong>Esra Al-Abduljabar</strong>
+  </h1>
+  <!--paragraph-->
+  <p class="section__subtitle section__subtitle--intro">front-end dev</p>
+  <img src="Images/profile pic.jpg" alt="" class="intro__img">
+</section>
+<!--my services - will link with the href links above-->
+<section class="my-services" id="services">
+<h2 class="section__title section__title--services">What I do
+</h2>
+
+
+<!--creating three columns-->
+<div class="services">
+     <div class="service">
+       <h3>Website Creator</h3>
+      <p>I use HTML, CSS, and Javascript to create simple to use interactive sites.</p>
+      </div> <!--close service-->
+
+      <div class="service">
+        <h3>Educational Content Creator</h3>
+       <p>Secondary Curricular resourc</p>
+       </div> <!--close service-->
+
+       <div class="service">
+         <h3>Nothing Else</h3>
+        <p>I am getting bored now</p>
+        </div> <!--close service-->
+
+</div> <!--close service-->
+<a href="#work" class="btn">projects</a>
+
+</section>
+
+<!--About me-->
+<section class="About-me" id="about">
+  <h2 class="section__title section__title--about">Who I am</h2>
+  <p class="section__subtitle section__subtitle--about">Developer based out of my room</p>
+  <!--don't use heading as subtitles-->
+  <div class="about-me__body">
+    <p>I still am figuring out</p>
+    <p> What i like to do</p>
+  </div>
+  <img src="Images/keyboard.jpg" alt="keyboard pic">
+</section>
+
+<!--Projects-->
+<section class="projects" id="projects">
+  <h2 class="section__title">Projects</h2>
+  <p class="section__subtitle"></p>
+  <div class="portfolio">
+    <!--portfolio item-->
+    <a href="#" class="portfolio__item">
+      <!--alt if you want to put a description of what the project is-->
+      <img src="Images/softw1.jpg" alt="" class="portfolio__img">
+    </a>
+
+    <a href="#" class="portfolio__item">
+      <!--alt if you want to put a description of what the project is-->
+      <img src="Images/softw1.jpg" alt="" class="portfolio__img">
+    </a>
+
+    <a href="#" class="portfolio__item">
+      <!--alt if you want to put a description of what the project is-->
+      <img src="Images/softw2.jpg" alt="" class="portfolio__img">
+    </a>
+
+    <a href="#" class="portfolio__item">
+      <!--alt if you want to put a description of what the project is-->
+      <img src="Images/softw3.jpg" alt="" class="portolio__img">
+    </a>
+  </div>
+</section>
+
+
+<!--footer-->
+<footer>
+  <a href="<a href="mailto:esra.wameed@yahoo.com" class="footer__link">esra.wameed@yahoo.com</a>
+  <ul class="social-list">
+    <li class="social-list__item"><a class="social-list__link" href="https://www.linkedin.com/in/esra-al-abduljabar-47201114b/">Linkedin</a></li>
+    <li class="social-list__item"><a class="social-list__link" href="https://twitter.com/eabduljabar">Twitter</a></li>
+    <li class="social-list__item"><a class="social-list__link" href="https://www.youtube.com/channel/UCKPtpZywqXa0z6Zx9VGIyrw">Youtube</a></li>
+    <li class="social-list__item"><a class="social-list__link" href="">github</a></li>
+
+  </ul>
+</footer>
+  </body>
+</html>

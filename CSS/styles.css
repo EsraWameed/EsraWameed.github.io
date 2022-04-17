@@ -1,0 +1,207 @@
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  /* changing how padding is calculated */
+
+}
+:root{
+--ff-primary: 'Source Sans Pro', sans-serif;
+--ff-secondary:'Source Code Pro', monospace;
+
+--fw-ref:300rem;
+--fw-bold:900rem;
+
+--clr-light: #fff;
+--clr-dark: #303030;
+--clr-accent: #16e0bd;
+
+--fs-h1: 3rem;
+--fs-h2: 2.25rem;
+--fs-h3: 1.25rem;
+--fs-body: 1rem;
+
+--bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25),
+0.125em 0.125em 0.25em rgba(0,0,0,0.15);
+}
+
+@media (min-width: 800px){
+  :root{
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+/* for using box shadow in more than one place to the right and down as well as blur */
+
+}
+
+/* General styles */
+body{
+  background: var(--clr-light);
+  color:var(--clr-dark);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+section{
+  padding: 5em 2em;
+}
+img {
+  display: block;
+  /* so they don't grow bigger than parent size */
+  max-width: 100%;
+}
+strong{ font-weight: var(--fw-bold)}
+
+:focus{
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+/* buttons */
+
+
+.btn{
+  display: inline-block;
+  padding: .5em 1.5em;
+  background-color: var(--clr-accent);
+  color: var(--clr-dark);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+  transition: transform 200ms ease-in-out;
+
+}
+
+.btn:hover{
+  transform: scale(1.1);
+}
+
+/* typography */
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  margin: 0;
+}
+
+h1 {font-size: var(--fs-h1)}
+h2 {font-size: var(--fs-h2)}
+h3 {font-size: var(--fs-h3)}
+
+.section__title{
+  margin-bottom: 0.25em;
+
+}
+
+.section__title--intro{
+  font-weight: var(--fw-reg);
+}
+.section__subtitle{
+  margin: 0;
+  font-size: var(--fs-h3):
+}
+
+.section__subtitle--intro,
+.section__subtitle--about{
+  background: var(--clr-accent);
+  font-family: var(--ff-secondary);
+  margin-bottom: 1em;
+}
+/* header */
+nav{display: none;}
+
+/* Intro section */
+.intro{
+  position: relative;
+}
+.intro__img{
+  box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+  .intro{
+    display: grid;
+    width: min-content;
+    /* match the length of the div */
+    margin: 0 auto;
+    grid-column-gap: 1em;
+    grid-template-areas:
+    "img title"
+    "img subtitle";
+    /* shrinks down as small as possible */
+    grid-template-columns: auto;
+  }
+/* line up */
+  .intro__img{
+    grid-area: img;
+    /* so image doesnt dissapear */
+    min-width: 250px;
+    position: relative;
+  }
+
+  .section__subtitle--intro{
+    align-self: flex-start;
+    /* to stretch length all the way across */
+    grid-column: -1/1;
+    /* to allow for overlap */
+
+    grid-row: 1;
+    text-align: right;
+    position: relative;
+    /* stretch to the left*/
+    left: -2.5em;
+    width: calc(100% + 2.5em);
+  }
+
+}
+
+/* My services section */
+.my-services{
+  background-color: var(--clr-dark);
+  background-image: url(../Images/AI.background.jpg);
+  background-size: cover;
+  text-align: center;
+  position: relative; top: -85px
+
+}
+
+.my-services{
+  color: var(--clr-light);
+}
+
+.section__title--services{
+  color: var(--clr-accent);
+  position: relative;
+}
+.section__title--services::after{
+  content: '';
+  display: block;
+  width: 3em;
+  height: 4px;
+  margin: 0.5em auto 1em;
+  color: var(--clr-light);
+}
+
+.service{
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+  .services{
+    /* automatically makes 3 columns */
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    center;
+  }
+
+.service + .service{
+  margin-left: 5em;
+}
+}
